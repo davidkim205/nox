@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ``` 
 python train_sft.py \
     --model_name_or_path davidkim205/nox-solar-10.7b-v2 \
-    --dataset /work/nox/datasets/komt-131k-test.jsonl \
+    --dataset davidkim205/kollm-converations \
     --output_dir outputs/sft \
     --stage sft\
     --do_train\
