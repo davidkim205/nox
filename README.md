@@ -1,6 +1,7 @@
 
 # nox
 Efficient fine-tuning for ko-llm models
+
 ![nox](assets/logo.jpeg)
 
 ## News or Update
@@ -34,6 +35,20 @@ pip install -r requirements.txt
 
 ### DPO Trainer
 
+## Evaluation
+https://github.com/davidkim205/kollm_evaluation
+
+
+## etc
+sft와 dpo 학습은 SOLAR 모델에 기준으로 작성되었기때문에 다른 모델을 사용시 template를 변경해야합니다. preprocess.py의 get_template를 참고하세요.
+```
+def get_template(user, input='', gpt=''):
+    if len(input) >= 1:
+        return f"### User:\n{user}\n{input}\n### Assistant:{gpt}\n"
+    else:
+        return f"### User:\n{user}\n### Assistant:\n"
+
+```
 
 # References
 - https://github.com/hiyouga/LLaMA-Factory
